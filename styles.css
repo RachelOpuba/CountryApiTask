@@ -1,0 +1,155 @@
+* {
+  font-family: Nunito Sans;
+}
+
+body {
+  background: var(--light-grey);
+  font-size: 14px;
+}
+
+:root {
+  --dark-blue: hsl(209, 23%, 22%);
+  --very-dark-blue-background: hsl(207, 26%, 17%);
+  --very-dark-blue-text: hsl(200, 15%, 8%);
+  --dark-grey: hsl(0, 0%, 52%);
+  --light-grey: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+}
+
+.nav-container {
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+
+.input {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.filter-region {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.cards-wraper {
+  background: var(--light-grey);
+  /* display: none; */
+}
+
+.card {
+  height: 350px;
+  margin-bottom: 2rem;
+  color: var(--very-dark-blue-text);
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.bold-text {
+  font-weight: 600;
+}
+
+.card img {
+  height: 50%;
+}
+
+.card-title {
+  font-weight: 800;
+}
+
+.row {
+  width: 100%;
+}
+
+.drop-down {
+  background: var(--white);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.region-list ul {
+  margin-top: 2rem;
+  background: var(--white);
+  border-radius: 5px;
+  position: absolute;
+  top: 8rem;
+  width: 130px;
+  right: 3rem;
+  padding: 1rem;
+  z-index: 5;
+}
+
+.region-list {
+  display: none;
+}
+
+.region-list.select {
+  display: block;
+}
+
+.region-list ul li {
+  list-style: none;
+  padding-left: 0;
+  cursor: pointer;
+}
+
+.back {
+  margin-left: 9rem;
+}
+
+.back-btn {
+  outline: none;
+  border: none;
+  background: var(--white);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.modal-wrap {
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.modal-wraper {
+  width: 90%;
+}
+.modal-flag img {
+  height: 300px;
+  width: 300px;
+}
+.modal-flag {
+  width: 40%;
+}
+
+.country-info {
+  width: 60%;
+}
+
+.modal-content {
+  border: 2px solid green;
+}
+
+.borders {
+  max-width: 60%;
+}
+
+@media screen and (max-width: 768px) {
+  .modal-flag {
+    width: 100%;
+  }
+
+  .country-info {
+    width: 100%;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+  .modal-wraper {
+    width: 100%;
+  }
+}

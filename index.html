@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&family=Poppins:wght@100;200;600;900&family=Red+Hat+Display:wght@500;700;900&family=Roboto:ital,wght@0,400;1,300;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>KODECAMP-2.0-QUALIFICATION-TEST</title>
+  </head>
+  <body>
+    <div
+      class="container py-3 px-5 d-flex justify-content-between nav-container"
+    >
+      <div>
+        <h5>Where in the world?</h5>
+      </div>
+
+      <div class="dark-theme d-flex">
+        <ion-icon name="moon-outline" class=""></ion-icon>
+        <h6>Dark Mode</h6>
+      </div>
+    </div>
+
+    <div class="cards-wraper py-5">
+      <div class="search-sec container d-flex justify-content-between">
+        <div class="search">
+          <input
+            type="text"
+            placeholder="search for country....."
+            class="input px-5 py-2"
+          />
+        </div>
+        <div class="drop-down p-2 filter-region">Filter by Region</div>
+      </div>
+
+      <div class="region-list">
+        <ul class="d-flex justify-content-start flex-column">
+          <li class="py-1 regions">Africa</li>
+          <li class="py-1 regions">America</li>
+          <li class="py-1 regions">Asia</li>
+          <li class="py-1 regions">Europe</li>
+          <li class="py-1 regions">Oceania</li>
+        </ul>
+      </div>
+
+      <div class="row mx-auto">
+        <div
+          class="card-holder col-lg-3 col-md-4 col-sm-12 my-5 country-data"
+        ></div>
+      </div>
+    </div>
+
+    <div class="modal-wrap">
+      <div class="back py-5">
+        <button class="back-btn px-4">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+          <span class="px-1">Back</span>
+        </button>
+      </div>
+
+      <section
+        class="container modal-sec d-flex flex-column justify-content-center align-items-center"
+      ></section>
+    </div>
+
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
