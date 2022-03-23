@@ -27,8 +27,21 @@ body {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.search-outline {
+  position: absolute;
+  top: 7.8rem;
+  left: 6rem;
+}
+
 .filter-region {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  font-size: 1re.8;
+}
+
+.chevron-down-outline {
+  position: absolute;
+  top: 7.8rem;
+  right: 5rem;
 }
 
 .cards-wraper {
@@ -116,40 +129,94 @@ body {
   display: block;
 }
 
-.modal-wraper {
-  width: 90%;
-}
 .modal-flag img {
   height: 300px;
   width: 300px;
 }
-.modal-flag {
-  width: 40%;
-}
 
 .country-info {
-  width: 60%;
+  font-size: 1rem;
 }
 
-.modal-content {
-  border: 2px solid green;
-}
+@media screen and (max-width: 1024px) {
+  .search-outline {
+    left: 4.5rem;
+  }
 
-.borders {
-  max-width: 60%;
+  .chevron-down-outline {
+    right: 4rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .search-outline {
+    left: 3.5rem;
+  }
+
+  .chevron-down-outline {
+    top: 7.8rem;
+    right: 3.5rem;
+  }
   .modal-flag {
     width: 100%;
   }
 
-  .country-info {
-    width: 100%;
-    margin-left: 5rem;
-    margin-right: 5rem;
-  }
   .modal-wraper {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .dark,
+  .where {
+    font-size: 1rem;
+  }
+  .search-sec {
+    flex-direction: column;
+  }
+  .input {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .search-outline {
+    left: 2rem;
+  }
+
+  .filter-region {
+    font-size: 0.8rem;
+    width: 50%;
+  }
+
+  .chevron-down-outline {
+    top: 12rem;
+    left: 11rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .search-outline {
+    top: 7.5rem;
+  }
+  .chevron-down-outline {
+    left: 10rem;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .dark,
+  .where {
+    font-size: 0.8rem;
+  }
+  .search-outline {
+    top: 7.2rem;
+    left: 2rem;
+  }
+  .filter-region {
+    font-size: 0.7rem;
+  }
+  .chevron-down-outline {
+    top: 11.5rem;
+    left: 8rem;
   }
 }

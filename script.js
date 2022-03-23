@@ -14,7 +14,7 @@ const backBtn = document.querySelector(".back-btn");
 
 let countriesData = [];
 
-//Fetching data from api
+// Fetching data from api
 const loadCountries = async () => {
   try {
     const res = await fetch("https://restcountries.com/v2/all");
@@ -29,7 +29,7 @@ const loadCountries = async () => {
 const displayCountries = (countries) => {
   const html = countries
     .map(function (elem) {
-      return `<div class="card-holder col-lg-3 col-md-4 col-sm-12 my-5">
+      return `<div class="card-holder col-lg-3 col-md-4 col-sm-12 my-2 ">
           <div class="card mx-auto "  style="width: 14rem" id="cards">
             <img
               src=${elem.flag}
@@ -71,70 +71,62 @@ const displayCountries = (countries) => {
       let singleCountryDetails = filteredDetails
         .map(function (country) {
           console.log(country);
-          return `<div class="modal-wraper d-flex justify-content-between">
-          <div class="modal-flag">
-            <img src=${country.flag} alt="" />
-          </div>
-          <div
-            class="country-info d-flex flex-column justify-content-between ps-5 py-4"
-          >
-            <p class="card-title">${country.name}</p>
-            <div
-              class="text-holder d-flex justify-content-between align-items-center"
-            >
-              <div class="left-text">
-                <p class="card-text py-1 my-0">
-                  <span class="bold-text">Native Name:</span> ${
-                    country.nativeName
-                  }
-                </p>
-                <p class="card-text py-1 my-0">
-                  <span class="bold-text">Population:</span> ${
-                    country.population
-                  }
-                </p>
-                <p class="card-text py-1 my-0">
-                  <span class="bold-text">Region:</span> ${country.region}
-                </p>
-                <p class="card-text py-1 my-0">
-                  <span class="bold-text">Sub Region:</span> ${
-                    country.subregion
-                  }
-                </p>
-                <p class="card-text py-1 my-0">
-                  <span class="bold-text">Capital:</span> ${country.capital}
-                </p>
-              </div>
-
-              <div class="right-text">
-                <p class="card-text py-1 my-0">
-                  <span class="bold-text">Top Levle Domain:</span> ${
-                    country.topLevelDomain
-                  }
-                </p>
-                <p class="card-text py-1 my-0 ">
-                  <span class="bold-text">Currencies:</span> ${country.currencies.map(
-                    (currencies) => currencies.name
-                  )}
-                </p>
-                <p class="card-text py-1 my-0">
-                  <span class="bold-text">Languages:</span> ${country.languages.map(
-                    (languages) => languages.name
-                  )}
-                  
-                </p>
-              </div>
+          return `
+          <div class="modal-wraper row container">
+        <div
+          class="modal-flag col-12 col-lg-6 d-flex justify-content-center align-items-center"
+        >
+          <img src="${country.flag}" alt="" />
+        </div>
+        <div class="country-info py-4 col-12 col-lg-6 mt-3 pe-5">
+          <p class="card-title">${country.name}</p>
+          <div class="text-holder d-lg-flex justify-content-between">
+            <div class="left-text mt-3">
+              <p class="card-text py-1 my-0">
+                <span class="bold-text">Native Name:</span> ${
+                  country.nativeName
+                }
+              </p>
+              <p class="card-text py-1 my-0">
+                <span class="bold-text">Population:</span> ${country.population}
+              </p>
+              <p class="card-text py-1 my-0">
+                <span class="bold-text">Region:</span> ${country.region}
+              </p>
+              <p class="card-text py-1 my-0">
+                <span class="bold-text">Sub Region:</span> ${country.subregion}
+              </p>
+              <p class="card-text py-1 my-0">
+                <span class="bold-text">Capital:</span> ${country.capital}
+              </p>
             </div>
 
-            <div class="borders">
+            <div class="right-text mt-3">
               <p class="card-text py-1 my-0">
-                <span class="bold-text">Border Countries:</span> ${
-                  country.borders
+                <span class="bold-text">Top Levle Domain:</span> ${
+                  country.topLevelDomain
                 }
+              </p>
+              <p class="card-text py-1 my-0">
+                <span class="bold-text">Currencies:</span>
+                ${country.currencies.map((currencies) => currencies.name)}
+              </p>
+              <p class="card-text py-1 my-0">
+                <span class="bold-text">Languages:</span>
+                ${country.languages.map((languages) => languages.name)}
               </p>
             </div>
           </div>
+
+          <div class="borders pt-3">
+            <p class="card-text py-1 my-0">
+              <span class="bold-text">Border Countries:</span> ${
+                country.borders
+              }
+            </p>
+          </div>
         </div>
+      </div>
 `;
         })
         .join("");
